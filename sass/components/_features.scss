@@ -1,0 +1,32 @@
+.features {
+  display: flex;
+}
+.feature {
+  @extend %list;
+  width: calc((100%-30px * 3) / 4);
+  margin-right: 30px;
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+.feature__thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+}
+.feature__subtitle {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $title-text-color;
+}
+.feature__desc {
+  font-size: 14px;
+  line-height: 1.71;
+}

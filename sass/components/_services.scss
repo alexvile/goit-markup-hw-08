@@ -1,0 +1,31 @@
+.services {
+  display: flex;
+}
+.service {
+  @extend %list;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+
+  &:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+}
+.service__img {
+  display: block;
+}
+.service__title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  overflow: hidden;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $primary-white-color;
+  background-color: $section-background-color;
+}

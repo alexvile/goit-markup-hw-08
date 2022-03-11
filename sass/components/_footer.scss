@@ -1,0 +1,100 @@
+.footer {
+  background-color: $bg-darl-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}
+.footer__logo {
+  color: $primary-white-color;
+  margin-bottom: 20px;
+}
+.footer__box:first-child {
+  margin-right: 70px;
+}
+.footer__box:nth-child(2) {
+  margin-right: 93px;
+}
+
+// footer contacts
+
+.foot-contacts {
+  font-style: normal;
+}
+
+.foot-contacts__item {
+  @extend %list;
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+.foot-contacts__link {
+  @extend %link;
+  font-size: 14px;
+  line-height: 1.71;
+  color: $semitransparent-white-color;
+}
+.foot-contacts__link--light-color {
+  color: $primary-white-color;
+}
+
+// footer signup
+.signup__input {
+  margin-right: 15px;
+  width: 358px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: $primary-white-color;
+  background-color: $bg-darl-color;
+
+  &::placeholder {
+    color: $semitransparent-white-color;
+  }
+}
+
+.signup__icon {
+  margin-left: 10px;
+}
+
+// footer socials
+
+.footer-socials__call,
+.signup__call {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $primary-white-color;
+}
+.footer-socials__list {
+  display: flex;
+}
+.footer-socials__item {
+  @extend %list;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.footer-socials__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: $primary-white-color;
+  background-color: $footer-icon-background-color;
+  transition: background-color 250ms $main-animation;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+.footer-socials__icon {
+  fill: currentColor;
+}

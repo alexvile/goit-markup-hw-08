@@ -1,0 +1,12 @@
+.logo {
+  @extend %link;
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: $title-text-color;
+}
+.logo__first-word {
+  color: $accent-color;
+}
