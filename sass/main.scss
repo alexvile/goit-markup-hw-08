@@ -2,8 +2,8 @@
 @import './utils/variables';
 @import './utils/placeholders';
 @import './utils/common-styles';
-// Components
-@import './components/page-header';
+@import './utils/breakpoits' // Components
+  @import './components/page-header';
 @import './components/logo';
 @import './components/buttons';
 @import './components/hero-section';
