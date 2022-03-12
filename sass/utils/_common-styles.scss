@@ -24,6 +24,8 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  width: 100%;
+
   @media screen and (min-width: $mobile) {
     width: $mobile;
   }
@@ -35,21 +37,21 @@ body {
   }
 }
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-.section--top-padding-no {
-  padding-top: 0;
-}
-.section--grey {
-  background-color: $bg-light-color;
-}
-.section__title {
-  margin-bottom: 50px;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: $title-text-color;
-}
+// .section {
+//   padding-top: 94px;
+//   padding-bottom: 94px;
+// }
+// .section--top-padding-no {
+//   padding-top: 0;
+// }
+// .section--grey {
+//   background-color: $bg-light-color;
+// }
+// .section__title {
+//   margin-bottom: 50px;
+//   font-size: 36px;
+//   line-height: 1.17;
+//   text-align: center;
+//   letter-spacing: 0.03em;
+//   color: $title-text-color;
+// }
