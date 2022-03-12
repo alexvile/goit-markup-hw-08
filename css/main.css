@@ -3,7 +3,7 @@
   text-decoration: none;
 }
 
-.nav__item, .head-contacts__item {
+.nav__item, .head-contacts__item, .feature {
   list-style-type: none;
 }
 
@@ -120,6 +120,19 @@ body {
   .container {
     width: 1200px;
   }
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.section--top-padding-no {
+  padding-top: 0;
+}
+
+.section--grey {
+  background-color: #f5f4fa;
 }
 
 .page-header {
@@ -382,5 +395,47 @@ body {
 .backdrop,
 .modal {
   display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .feature:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.feature__thumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+}
+
+.feature__subtitle {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #212121;
+}
+
+@media screen and (max-width: 767px) {
+  .feature__subtitle {
+    text-align: center;
+  }
+}
+
+.feature__desc {
+  font-size: 14px;
+  line-height: 1.71;
 }
 /*# sourceMappingURL=main.css.map */
