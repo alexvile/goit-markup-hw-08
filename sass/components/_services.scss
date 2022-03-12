@@ -1,4 +1,4 @@
-.services {
+.services__list {
   display: flex;
 }
 .service {
@@ -28,4 +28,9 @@
   text-transform: uppercase;
   color: $primary-white-color;
   background-color: $section-background-color;
+}
+.services__section {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
