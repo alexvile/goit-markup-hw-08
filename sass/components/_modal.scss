@@ -143,3 +143,8 @@
   border: 2px solid $title-text-color;
   border-radius: 2px;
 }
+
+.backdrop,
+.modal {
+  display: none;
+}
