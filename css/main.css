@@ -92,18 +92,7 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
-.nav__list {
-  margin-left: 93px;
-}
-
-.nav__item:not(:last-child) {
-  margin-right: 50px;
-}
-
 .nav__link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: #212121;
 }
 

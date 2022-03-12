@@ -16,23 +16,23 @@
 
 // Navigation
 
-.nav__list {
-  // display: flex;
-  margin-left: 93px;
-}
+// .nav__list {
+//   // display: flex;
+//   // margin-left: 93px;
+// }
 .nav__item {
   @extend %list;
 
-  &:not(:last-child) {
-    margin-right: 50px;
-  }
+  // &:not(:last-child) {
+  //   margin-right: 50px;
+  // }
 }
 .nav__link {
   @extend %link;
   @extend %header-links;
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  // display: block;
+  // padding-top: 32px;
+  // padding-bottom: 32px;
   color: $title-text-color;
 }
 .nav__link--current {
