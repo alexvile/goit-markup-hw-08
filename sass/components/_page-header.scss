@@ -1,15 +1,23 @@
 .page-header {
   border-bottom: 1px solid #ececec;
 }
-.page-header__container {
-  display: flex;
-  align-items: center;
-}
+// .page-header__container {
+//   // display: flex;
+//   // align-items: center;
+// }
+
+// .page-header__container {
+//   width: $mobile;
+// // }
+// .page-header__container {
+//   background-color: $accent-color;
+//   width: $kina;
+// }
 
 // Navigation
 
 .nav__list {
-  display: flex;
+  // display: flex;
   margin-left: 93px;
 }
 .nav__item {
@@ -45,10 +53,10 @@
 
 // Header contacts
 
-.head-contacts {
-  display: flex;
-  margin-left: auto;
-}
+// .head-contacts {
+//   // display: flex;
+//   // margin-left: auto;
+// }
 
 .head-contacts__item {
   @extend %list;
@@ -61,8 +69,8 @@
 .head-contacts__link {
   @extend %header-links;
   @extend %link;
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   color: $primary-text-color;
