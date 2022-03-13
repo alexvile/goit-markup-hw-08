@@ -1,23 +1,80 @@
 .page-header {
+  position: relative;
   border-bottom: 1px solid #ececec;
 }
-// .page-header__container {
-//   // display: flex;
-//   // align-items: center;
-// }
+.page-header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
 
+// Mobile menu
+.menu__button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  // transition: color 250ms $main-animation;
+
+  // &:hover,
+  // &:focus {
+  //   color: $accent-color;
+  // }
+
+  & .icon-cross {
+    display: none;
+  }
+  &.is-open .icon-cross {
+    display: block;
+  }
+  &.is-open .icon-menu {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.menu__icon {
+  fill: currentColor;
+}
+
+.menu__container {
+  background: $primary-white-color;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+
+  &.is-open {
+    display: block;
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    min-height: 300px;
+    padding: 48px 40px;
+  }
+}
 // Navigation
 
-// .nav__list {
-//   // display: flex;
-//   // margin-left: 93px;
-// }
+.nav__list {
+  // display: flex;
+  // margin-left: 93px;
+  margin-bottom: 302px;
+}
 .nav__item {
   @extend %list;
 
-  // &:not(:last-child) {
-  //   margin-right: 50px;
-  // }
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
 }
 .nav__link {
   @extend %link;
@@ -25,54 +82,99 @@
   // display: block;
   // padding-top: 32px;
   // padding-bottom: 32px;
-  color: $title-text-color;
-}
-.nav__link--current {
-  color: $accent-color;
 
-  // &::after {
-  //   display: inline-block;
-  //   position: absolute;
-  //   content: '';
-  //   left: 0;
-  //   bottom: 0;
-  //   width: 100%;
-  //   height: 4px;
-  //   border-radius: 2px;
-  //   background-color: $accent-color;
-  // }
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: $title-text-color;
+  transition: color 250ms $main-animation;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
+
+// .nav__link--current {
+//   color: $accent-color;
+
+// &::after {
+//   display: inline-block;
+//   position: absolute;
+//   content: '';
+//   left: 0;
+//   bottom: 0;
+//   width: 100%;
+//   height: 4px;
+//   border-radius: 2px;
+//   background-color: $accent-color;
+// }
 
 // Header contacts
 
-// .head-contacts {
-//   // display: flex;
-//   // margin-left: auto;
-// }
+.head-contacts {
+  // display: flex;
+  // margin-left: auto;
+  margin-bottom: 64px;
+}
 
 .head-contacts__item {
   @extend %list;
 
-  // &:not(:last-child) {
-  //   margin-right: 50px;
-  // }
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
 }
 
 .head-contacts__link {
-  @extend %header-links;
+  // @extend %header-links;
   @extend %link;
   // display: flex;
   // align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  // padding-top: 32px;
+  // padding-bottom: 32px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   color: $primary-text-color;
 }
+.head-contacts__link--big {
+  font-size: 34px;
+  line-height: 1.18;
+  color: $accent-color;
+}
+.head-contacts__link--small {
+  font-size: 24px;
+  line-height: 1.17;
+}
+.head-contacts__icon {
+  margin-right: 10px;
+  fill: currentColor;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+// Header socials
+.head-socials {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+}
+.head-socials__item {
+  &:not(:first-child) {
+    padding-left: 10px;
+  }
+  &:not(:last-child) {
+    padding-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+.head-socials__link {
+  @extend %link;
 
-// .head-contacts__icon {
-//   // margin-right: 10px;
-//   fill: currentColor;
-// }
-.nav__list,
-.head-contacts {
-  display: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: $accent-color;
 }
