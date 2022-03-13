@@ -1,12 +1,15 @@
 .port-buttons {
   @extend %list;
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
 }
-.port-button:not(:last-child) {
-  margin-right: 8px;
+.port-button {
+  margin-bottom: 15px;
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
 }
+
 .port-button__link {
   @extend %btn;
   padding: 6px 22px;
