@@ -13,6 +13,11 @@
   @media screen and (min-width: $tablet) {
     max-width: $tablet;
   }
+  @media screen and (min-width: $desktop) {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .site-title {
@@ -26,4 +31,10 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $primary-white-color;
+
+  @media screen and (min-width: $desktop) {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
