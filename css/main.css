@@ -986,13 +986,26 @@ body {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 @media screen and (max-width: 1199px) {
   .footer__box:not(:last-child) {
     margin-bottom: 60px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px), (max-width: 1199px) {
   .footer__box:not(:last-child) {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
