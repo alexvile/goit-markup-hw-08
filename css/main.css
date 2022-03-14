@@ -420,8 +420,8 @@ body {
 
 .hero {
   max-width: 480px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
   padding-top: 118px;
   padding-bottom: 118px;
   text-align: center;
@@ -430,6 +430,12 @@ body {
   background-position: center;
   background-color: black;
   /* резервный фон */
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+  }
 }
 
 .site-title {

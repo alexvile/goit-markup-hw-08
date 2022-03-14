@@ -1,7 +1,7 @@
 .hero {
   max-width: $mobile;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
   padding-top: 118px;
   padding-bottom: 118px;
   text-align: center;
@@ -9,6 +9,10 @@
     url(../images/hero-background000000000000000000000000000000000000000.jpg);
   background-position: center;
   background-color: black; /* резервный фон */
+
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+  }
 }
 
 .site-title {
