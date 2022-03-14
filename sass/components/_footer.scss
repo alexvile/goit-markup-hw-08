@@ -11,13 +11,14 @@
   }
 }
 .footer__box:not(:last-child) {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
   @media screen and (min-width: $tablet) {
     flex-basis: 50%;
   }
 }
-.footer__box:not(:last-child) {
-  margin-bottom: 60px;
-}
+
 .footer__logo {
   color: $primary-white-color;
   margin-bottom: 20px;
@@ -90,6 +91,7 @@
 .signup__input {
   margin-bottom: 20px;
   width: 100%;
+  max-width: 450px;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
