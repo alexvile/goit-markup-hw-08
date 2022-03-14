@@ -4,16 +4,20 @@
   flex-wrap: wrap;
   margin: -15px;
 }
-// .client:not(:last-child) {
-//   margin-right: 30px;
-// }
+
 .client {
   flex-basis: calc((100% - 2 * 30px) / 2);
   margin: 15px;
+
   @media screen and (min-width: $tablet) {
     flex-basis: calc((100% - 3 * 30px) / 3);
   }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 6 * 30px) / 6);
+  }
 }
+
 .client__link {
   display: flex;
   align-items: center;

@@ -58,6 +58,12 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: $title-text-color;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
 // img {
