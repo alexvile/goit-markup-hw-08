@@ -164,11 +164,11 @@
 
 .head-contacts__link {
   // @extend %header-links;
-  @extend %link;
   // display: flex;
   // align-items: center;
   // padding-top: 32px;
   // padding-bottom: 32px;
+  @extend %link;
   font-weight: 500;
   letter-spacing: 0.02em;
   color: $primary-text-color;
