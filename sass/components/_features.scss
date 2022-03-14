@@ -1,20 +1,23 @@
-// .features {
-//   // display: flex;
-// }
+.features {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
 .feature {
   @extend %list;
-  &:not(:last-child) {
-    @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
       margin-bottom: 30px;
     }
   }
-
-  // width: calc((100%-30px * 3) / 4);
-  // margin-right: 30px;
-  // &:nth-child(4n) {
-  //   margin-right: 0;
-  // }
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 30px * 2) / 2);
+    margin: 15px;
+  }
 }
+
 .feature__thumb {
   display: flex;
   align-items: center;

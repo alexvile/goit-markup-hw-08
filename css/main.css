@@ -641,9 +641,28 @@ body {
   border-radius: 2px;
 }
 
+@media screen and (min-width: 768px) {
+  .features {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .feature:not(:last-child) {
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .feature {
+    -ms-flex-preferred-size: calc((100% - 30px * 2) / 2);
+        flex-basis: calc((100% - 30px * 2) / 2);
+    margin: 15px;
   }
 }
 
