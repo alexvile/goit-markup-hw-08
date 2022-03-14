@@ -45,10 +45,6 @@
 }
 
 .menu__container {
-  background: $primary-white-color;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
-    0px 1px 3px rgba(0, 0, 0, 0.16);
-
   @media screen and (max-width: 767px) {
     display: none;
     position: absolute;
@@ -57,32 +53,48 @@
     width: 100%;
     min-height: 300px;
     padding: 48px 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+    z-index: 30;
+    background: $primary-white-color;
 
     &.is-open {
       display: block;
     }
   }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
 }
 // Navigation
 
 .nav__list {
-  // display: flex;
-  // margin-left: 93px;
-  margin-bottom: 302px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 302px;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 .nav__item {
   @extend %list;
 
-  &:not(:last-child) {
-    margin-bottom: 32px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
   }
 }
 .nav__link {
   @extend %link;
   @extend %header-links;
-  // display: block;
-  // padding-top: 32px;
-  // padding-bottom: 32px;
 
   font-weight: 500;
   font-size: 40px;
@@ -91,40 +103,62 @@
   color: $title-text-color;
   transition: color 250ms $main-animation;
 
+  @media screen and (min-width: 768px) {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+
   &:hover,
   &:focus {
     color: $accent-color;
   }
 }
 
-// .nav__link--current {
-//   color: $accent-color;
+.nav__link--current {
+  @media screen and (min-width: 768px) {
+    color: $accent-color;
 
-// &::after {
-//   display: inline-block;
-//   position: absolute;
-//   content: '';
-//   left: 0;
-//   bottom: 0;
-//   width: 100%;
-//   height: 4px;
-//   border-radius: 2px;
-//   background-color: $accent-color;
-// }
+    &::after {
+      display: inline-block;
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: $accent-color;
+    }
+  }
+}
 
 // Header contacts
 
 .head-contacts {
-  // display: flex;
-  // margin-left: auto;
-  margin-bottom: 64px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 64px;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 84px;
+  }
 }
 
 .head-contacts__item {
   @extend %list;
-
-  &:not(:last-child) {
-    margin-bottom: 32px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &:last-child {
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -138,28 +172,44 @@
   font-weight: 500;
   letter-spacing: 0.02em;
   color: $primary-text-color;
+
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+    line-height: 1.17;
+    display: flex;
+    align-items: center;
+  }
 }
-.head-contacts__link--big {
-  font-size: 34px;
-  line-height: 1.18;
-  color: $accent-color;
+
+@media screen and (max-width: 767px) {
+  .head-contacts__link--big {
+    font-size: 34px;
+    line-height: 1.18;
+    color: $accent-color;
+  }
+  .head-contacts__link--small {
+    font-size: 24px;
+    line-height: 1.17;
+  }
 }
-.head-contacts__link--small {
-  font-size: 24px;
-  line-height: 1.17;
-}
+
 .head-contacts__icon {
-  margin-right: 10px;
+  margin-right: 8px;
   fill: currentColor;
   @media screen and (max-width: 767px) {
     display: none;
   }
 }
+
 // Header socials
 .head-socials {
   @extend %list;
   display: flex;
   flex-wrap: wrap;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 .head-socials__item {
   &:not(:first-child) {
@@ -170,9 +220,9 @@
     border-right: 1px solid rgba(33, 33, 33, 0.2);
   }
 }
+
 .head-socials__link {
   @extend %link;
-
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
