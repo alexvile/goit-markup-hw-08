@@ -10,6 +10,9 @@
 .client {
   flex-basis: calc((100% - 2 * 30px) / 2);
   margin: 15px;
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 3 * 30px) / 3);
+  }
 }
 .client__link {
   display: flex;
