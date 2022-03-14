@@ -2,11 +2,17 @@
   @extend %list;
   display: flex;
   flex-wrap: wrap;
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
 }
 .port-button {
-  margin-bottom: 15px;
   &:not(:last-child) {
     margin-right: 8px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
   }
 }
 

@@ -6,6 +6,11 @@
   line-height: 1.17;
   font-weight: 700;
   color: $title-text-color;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 .logo__first-word {
   color: $accent-color;
