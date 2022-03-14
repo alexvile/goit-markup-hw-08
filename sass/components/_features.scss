@@ -16,6 +16,9 @@
     flex-basis: calc((100% - 30px * 2) / 2);
     margin: 15px;
   }
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 30px * 4) / 4);
+  }
 }
 
 .feature__thumb {
