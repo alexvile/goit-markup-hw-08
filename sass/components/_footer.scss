@@ -2,16 +2,25 @@
   background-color: $bg-darl-color;
   text-align: center;
 }
-// .footer__container {
-//   display: flex;
-//   align-items: baseline;
-// }
-.footer__logo {
-  color: $primary-white-color;
-  margin-bottom: 20px;
+.footer__container {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+  }
+}
+.footer__box:not(:last-child) {
+  @media screen and (min-width: $tablet) {
+    flex-basis: 50%;
+  }
 }
 .footer__box:not(:last-child) {
   margin-bottom: 60px;
+}
+.footer__logo {
+  color: $primary-white-color;
+  margin-bottom: 20px;
 }
 
 // footer contacts
