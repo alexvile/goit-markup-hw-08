@@ -5,14 +5,39 @@
   padding-top: 118px;
   padding-bottom: 118px;
   text-align: center;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/hero-background000000000000000000000000000000000000000.jpg);
+  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-image: $black-gradient, url(../../images/hero-mob.jpg);
   background-color: black; /* резервный фон */
 
-  @media screen and (min-width: $tablet) {
-    max-width: $tablet;
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: $black-gradient, url(../../images/hero-mob@2x.jpg);
   }
+
+  @media screen and (min-width: 481px) {
+    max-width: $tablet;
+    background-image: $black-gradient, url(../../images/hero-tab.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: $black-gradient, url(../../images/hero-tab@2x.jpg);
+    }
+  }
+  @media screen and (min-width: 769px) {
+    max-width: $desktop;
+    background-image: $black-gradient, url(../../images/hero-desk.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: $black-gradient, url(../../images/hero-desk@2x.jpg);
+    }
+  }
+
   @media screen and (min-width: $desktop) {
     max-width: 1600px;
     padding-top: 200px;
