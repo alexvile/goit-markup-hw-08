@@ -1236,9 +1236,7 @@ body {
 }
 
 .port-card {
-  -ms-flex-preferred-size: calc((100% - 2 * 30px) / 2);
-      flex-basis: calc((100% - 2 * 30px) / 2);
-  margin: 15px;
+  max-width: 450px;
 }
 
 .port-card:not(:last-child) {
@@ -1250,13 +1248,25 @@ body {
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+@media screen and (min-width: 768px) {
+  .port-card {
+    -ms-flex-preferred-size: calc((100% - 2 * 30px) / 2);
+        flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .port-card {
+    -ms-flex-preferred-size: calc((100% - 3 * 30px) / 3);
+        flex-basis: calc((100% - 3 * 30px) / 3);
+    margin: 15px;
+  }
+}
+
 .port-card__thumb {
   position: relative;
   overflow: hidden;
-}
-
-.port-card__img {
-  display: block;
 }
 
 .port-card__overlay {
@@ -1265,6 +1275,16 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
   background-color: rgba(33, 150, 243, 0.9);
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
@@ -1285,7 +1305,6 @@ body {
 }
 
 .port-card__label {
-  padding: 77px 24px;
   font-size: 18px;
   line-height: 1.56;
   color: #ffffff;
