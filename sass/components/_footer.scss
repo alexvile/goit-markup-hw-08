@@ -116,9 +116,13 @@
   &::placeholder {
     color: $semitransparent-white-color;
   }
-  @media screen and (max-width: 1199px) {
-    max-width: 450px;
+  @media screen and (max-width: 767px) {
     width: 100%;
+    max-width: 450px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: block;
+    width: 450px;
   }
   @media screen and (min-width: $desktop) {
     width: 358px;
