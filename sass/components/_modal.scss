@@ -144,29 +144,33 @@
     line-height: 1.17;
   }
 }
+
 .contact-form__policy {
+  text-align: center;
+  padding-left: 20px;
   position: relative;
   display: inline-block;
   margin-bottom: 30px;
   font-size: 12px;
   line-height: 1.17;
   color: $primary-text-color;
+
   @media screen and (min-width: $desktop) {
     font-size: 14px;
     line-height: 1.71;
   }
 }
 .contact-form__checkbox {
-  appearance: none;
+  // appearance: none;
+  // position: absolute;
+  @extend %visually-hidden;
 
   &:checked ~ .checkbox-icon {
     background-color: $accent-color;
     border: none;
   }
 }
-.contact-form__policy-text {
-  margin-left: 16px;
-}
+
 .contact-form__agreement {
   color: $accent-color;
 }
