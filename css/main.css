@@ -771,7 +771,7 @@ body {
 
 .contact-form__policy {
   position: relative;
-  display: block;
+  display: inline-block;
   margin-bottom: 30px;
   font-size: 12px;
   line-height: 1.17;
