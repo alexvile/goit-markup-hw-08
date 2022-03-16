@@ -88,6 +88,9 @@
   font-size: 20px;
   line-height: 1.5;
   color: $title-text-color;
+  @media screen and (min-width: $desktop) {
+    line-height: 1.15;
+  }
 }
 .contact-form__field {
   position: relative;
@@ -136,6 +139,10 @@
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+  @media screen and (min-width: $desktop) {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 .contact-form__policy {
   position: relative;
@@ -144,17 +151,22 @@
   font-size: 12px;
   line-height: 1.17;
   color: $primary-text-color;
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .contact-form__checkbox {
   appearance: none;
-  margin-right: 8px;
 
   &:checked ~ .checkbox-icon {
     background-color: $accent-color;
     border: none;
   }
 }
-
+.contact-form__policy-text {
+  margin-left: 16px;
+}
 .contact-form__agreement {
   color: $accent-color;
 }

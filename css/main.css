@@ -669,6 +669,12 @@ body {
   color: #212121;
 }
 
+@media screen and (min-width: 1200px) {
+  .contact-form__call {
+    line-height: 1.15;
+  }
+}
+
 .contact-form__field {
   position: relative;
   display: block;
@@ -744,6 +750,25 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 
+@media screen and (min-width: 1200px) {
+  .contact-form__feedback::-webkit-input-placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+  .contact-form__feedback:-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+  .contact-form__feedback::-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+  .contact-form__feedback::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+
 .contact-form__policy {
   position: relative;
   display: block;
@@ -753,16 +778,26 @@ body {
   color: #757575;
 }
 
+@media screen and (min-width: 1200px) {
+  .contact-form__policy {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
 .contact-form__checkbox {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  margin-right: 8px;
 }
 
 .contact-form__checkbox:checked ~ .checkbox-icon {
   background-color: #2196f3;
   border: none;
+}
+
+.contact-form__policy-text {
+  margin-left: 16px;
 }
 
 .contact-form__agreement {
