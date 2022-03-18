@@ -51,6 +51,12 @@ body {
     padding-bottom: 94px;
   }
 }
+.section--short {
+  @media screen and (min-width: $desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 .section--top-padding-no {
   padding-top: 0;
 }

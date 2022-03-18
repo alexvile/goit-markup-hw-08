@@ -137,6 +137,13 @@ body {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .section--short {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
 .section--top-padding-no {
   padding-top: 0;
 }
