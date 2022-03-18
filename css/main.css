@@ -1269,6 +1269,12 @@ body {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .port-buttons {
+    margin-bottom: 50px;
+  }
+}
+
 .port-button:not(:last-child) {
   margin-right: 8px;
 }
